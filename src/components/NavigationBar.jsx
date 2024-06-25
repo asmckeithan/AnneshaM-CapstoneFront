@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../navigation.css'
 const NavigationBar = () => {
   return (
     <header className='header'>
