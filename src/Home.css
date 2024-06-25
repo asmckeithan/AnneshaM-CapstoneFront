@@ -14,7 +14,7 @@
   }
   .left-side { 
     grid-area: 2 / 1 / 5 / 2;
-    background-color: brown;
+    background-color: rgb(84, 67, 67);
     
   }
   .middle-section{
@@ -30,6 +30,7 @@
     grid-area: 5 / 1 / 6 / 6;
     background-color: rgb(26, 91, 115);
     width: 100%;
+
   }
 
   .title{
@@ -44,4 +45,17 @@
     font-size: 25px;
     font-style: italic;
     text-shadow: black 4px ;
+  }
+  .reference-list{
+    
+    display: flex;
+    font-size: 20px;
+    color: aliceblue;
+    flex-direction: row;
+    margin-right: 10px;
+    
+    
+  }
+  .location{
+    height: 100%;
   }

@@ -31,18 +31,40 @@
     background-color: rgb(236, 240, 243);
     color: rgb(35, 159, 221);
     width: 150px;
-    height: 70px;
+    height: 60px;
     font-size: 30px;
     display: flex;
     align-items: center;
-    box-shadow: rgb(76, 173, 238) 2px 3px 4px;
+    box-shadow: rgb(108, 194, 251) 2px 3px 4px;
     margin-left: 10px;
     text-align: center;
     
 }
 .login-btn{
     background-color: rgb(127, 211, 224);
+    padding: 5px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    margin-left: 100px;
+    border-radius: 10px;
+    font-size: 18px;
 }
 .main-search{
     background-color: rgb(127, 211, 224);
+    padding: 5px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+#search{
+    margin-left: 400px;
+    width: 350px;
+    height: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
 }
