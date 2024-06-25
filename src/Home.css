@@ -35,16 +35,16 @@
 
   .title{
     text-align: center;
-    color:rgb(33, 148, 129) ;
-    text-shadow: rgb(221, 69, 22) black 2px 5px;
+    color:#74c1cd ;
     font-size: 100px;
+    text-shadow: rgb(127, 63, 138) 1px 4px 2px ;
   }
 
   .intro{
     text-align: center;
     font-size: 25px;
     font-style: italic;
-    text-shadow: black 4px ;
+    text-shadow: rgb(152, 198, 85) 4px ;
   }
   .reference-list{
     

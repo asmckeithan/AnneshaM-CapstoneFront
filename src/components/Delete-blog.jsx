@@ -18,7 +18,7 @@ const DeleteArticle = () => {
     const handleDelete = async (articleid) => {
         try {//fetch delete 
             const response = await fetch(
-                `http://localhost:8000/api/blog/delete/:${articleid}`,
+                `http://localhost:8000/api/blog/delete/${articleid}`,
                 {
                     method: "DELETE",
                 }
@@ -42,15 +42,16 @@ const DeleteArticle = () => {
         <div id="tbl-head">
             <h1>----------------------Remove Articles Here ----------------------</h1>
             <table id="tbl">
-                <tbody>
+                <tr>
                     <th>Title</th>
                     <th>Category</th>
                     <th>Description</th>
                     <th>Image</th>
                     <th>Video</th>
-                </tbody>
-                {articles.map((article) => (
-                    <tbody>
+                </tr>
+                <tbody>
+                  {articles.map((article) => (
+                    <tr>
                       <td>{article.category}</td>
                         <td>{article.title}</td>
                         <td>{article.description}</td>
@@ -63,8 +64,9 @@ const DeleteArticle = () => {
                                 Remove
                             </button>
                         </td>
-                    </tbody>
-                ))}
+                    </tr>
+                   
+                ))}</tbody>
             </table>
         </div>
     );

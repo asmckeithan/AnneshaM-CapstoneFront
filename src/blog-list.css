@@ -1,3 +1,9 @@
-#tbl_head{
+#tbl{
    background-color: aquamarine; 
 }
+.title{
+    text-align: center;
+    color:#74c1cd ;
+    font-size: 100px;
+    text-shadow: rgb(127, 63, 138) 1px 4px 2px ;
+  }

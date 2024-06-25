@@ -23,30 +23,34 @@ function NewsList() {
   };
 
   return (
-        <div>
-            <h2>Latest Articles</h2>
-            <div id="tbl-head">
-            <table id="tbl">
-                <tbody>
-                    <th>Title</th>
-                    <th>Category</th>
-                    <th>Description</th>
-                    <th>Image</th>
-                    <th>Video</th>
-                </tbody>
-                {articles.map((article) => (
-                    <tbody>
-                      <td>{article.category}</td>
-                        <td>{article.title}</td>
-                        <td>{article.description}</td>
-                        <td>{article.image}</td>
-                        <td>{article.video}</td>
-                    </tbody>
+    <div>
+        <div classNameName="App">
+            <div className="container">
+                {articles.map(article => (
+                    <div className="card">
+
+                        <div className="card__body">
+                            <span className="tag tag-green">
+                                {article.category}
+                            </span>
+                            <h4>{article.title}</h4>
+                            <p>{article.description}</p>
+                        </div>
+                        <div className="card__footer">
+                            <div className="user">
+                                <div className="user__info">
+                                    <h5>{article.image}</h5>
+                                    <small>{article.createdAt}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 ))}
-            </table>
-            </div>  
-            </div>  
-  );
+            </div>
+        </div>
+
+    </div>
+);
 }
 
 export default NewsList;

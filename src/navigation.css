@@ -7,7 +7,7 @@
     font-family: Georgia, serif;
     height: 100px;
     font-size: 20px;
-    box-shadow: rgb(14, 179, 179) 2px 3px 5px;
+    box-shadow: #74c1cd 2px 3px 5px;
     min-width: 100vh;
 }
 .navbar{
@@ -29,15 +29,17 @@
 }
 .logo{
     background-color: rgb(236, 240, 243);
-    color: rgb(35, 159, 221);
+    color: rgb(127, 63, 138);
     width: 150px;
     height: 60px;
     font-size: 30px;
     display: flex;
     align-items: center;
-    box-shadow: rgb(132, 247, 210) 2px 3px 4px;
+    text-shadow: #6abecb 1px 2px ;
+    box-shadow: rgb(92, 230, 85) 2px 3px 4px;
     margin-left: 10px;
     text-align: center;
+    font-style: italic;
     
 }
 .login-btn{

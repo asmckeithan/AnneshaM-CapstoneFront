@@ -11,7 +11,7 @@ function News() {
         <div>
             <div className="around">
                 <NavigationBar/> 
-            
+                <h1 className="title">Word on the Street is...</h1>
                 <NewsList/>
                 <DeleteArticle/>
             </div>
