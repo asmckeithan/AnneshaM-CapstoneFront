@@ -1,5 +1,5 @@
 import React from "react";
-
+import '../blog-list.css'
 import { useEffect, useState } from "react";
  
 const DeleteArticle = () => {
@@ -10,15 +10,15 @@ const DeleteArticle = () => {
         // Fetch articles from backend when component mounts
         fetch("http://localhost:8000/api/blog")
             .then((response) => response.json())
-            .then((data) => setArticles(data))
+            .then((data) => {setArticles(data.blogs);console.log("Test",data.blogs)}) 
             .catch((error) =>
                 console.error("Error fetching articles:", error));
     }, [deleted]);
  
     const handleDelete = async (articleid) => {
-        try {
+        try {//fetch delete 
             const response = await fetch(
-                `http://localhost:8000/api/blog/delete/${articleid}`,
+                `http://localhost:8000/api/blog/delete/:${articleid}`,
                 {
                     method: "DELETE",
                 }
@@ -40,30 +40,30 @@ const DeleteArticle = () => {
     };
     return (
         <div id="tbl-head">
-            <h1>Articles</h1>
+            <h1>----------------------Remove Articles Here ----------------------</h1>
             <table id="tbl">
-                <tr>
+                <tbody>
                     <th>Title</th>
                     <th>Category</th>
-                    <th>Author</th>
-                    <th>Date</th>
-                    <th>Action</th>
-                </tr>
+                    <th>Description</th>
+                    <th>Image</th>
+                    <th>Video</th>
+                </tbody>
                 {articles.map((article) => (
-                    <tr>
+                    <tbody>
+                      <td>{article.category}</td>
                         <td>{article.title}</td>
-                        <td>{article.category}</td>
-                        <td>{article.author}</td>
-                        <td>{article.createdAt}</td>
+                        <td>{article.description}</td>
+                        <td>{article.image}</td>
+                        <td>{article.video}</td>
                         <td>
                             <button
                                 className="dl-btn"
-                                onClick={() => handleDelete(article._id)}
-                            >
-                                Delete
+                                onClick={() => handleDelete(article._id)}>
+                                Remove
                             </button>
                         </td>
-                    </tr>
+                    </tbody>
                 ))}
             </table>
         </div>

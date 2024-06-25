@@ -16,29 +16,36 @@ function NewsList() {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
-      setArticles(data.articles); // Assuming 'articles' is the key in your response
+      setArticles(data.blogs); // Assuming 'articles' is the key in your response
     } catch (error) {
       console.error('Error fetching articles:', error);
     }
   };
 
   return (
-    
-    <div>
-    <h1>Articles</h1>
-    {articles.length === 0 ? (
-      <p>Loading...</p>
-    ) : (
-      <ul>
-        {articles.map(articles => (
-          <li key={articles.id}>
-            <h2>{articles.title}</h2>
-            <p>{articles.content}</p>
-          </li>
-        ))}
-      </ul>
-    )}
-  </div>
+        <div>
+            <h2>Latest Articles</h2>
+            <div id="tbl-head">
+            <table id="tbl">
+                <tbody>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                    <th>Video</th>
+                </tbody>
+                {articles.map((article) => (
+                    <tbody>
+                      <td>{article.category}</td>
+                        <td>{article.title}</td>
+                        <td>{article.description}</td>
+                        <td>{article.image}</td>
+                        <td>{article.video}</td>
+                    </tbody>
+                ))}
+            </table>
+            </div>  
+            </div>  
   );
 }
 

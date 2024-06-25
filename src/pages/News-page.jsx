@@ -9,9 +9,9 @@ function News() {
     
     return(
         <div>
-        <NavigationBar/> 
             <div className="around">
-                <h1>GFG News App</h1>
+                <NavigationBar/> 
+            
                 <NewsList/>
                 <DeleteArticle/>
             </div>
