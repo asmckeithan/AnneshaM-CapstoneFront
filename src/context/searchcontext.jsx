@@ -1,26 +1,32 @@
-// searchcontext.js
+import React, {createContext, useReducer, useContext} from 'react'
 
-import React, { createContext, useContext, useState } from 'react';
+//creating the context in a variable
+const searchContext = createContext();
 
-const SearchContext = createContext();
-
-export const SearchProvider = ({ children }) => {
-  const [state, setState] = useState({
-    searchTerm: '',
-    // other initial state properties
-  });
-
-  return (
-    <SearchContext.Provider value={{ state, setState }}>
-      {children}
-    </SearchContext.Provider>
-  );
+//create a variable showing the initial state or search value
+const initialState = {
+    searchValue: '',
 };
 
-export const useSearch = () => {
-  const context = useContext(SearchContext);
-  if (!context) {
-    throw new Error('useSearch must be used within a SearchProvider');
-  }
-  return context;
-};
+//declare a callback function using state and action as the properties
+const reducer = (state, action) => {
+    switch(action.type) {
+        case 'SET_SEARCH_TERM':
+            return{...state, searchValue: action.payload}
+            defalut:
+            return state
+    }
+}
+
+//providing context to the children with the dispatch function to trigger state
+export const SearchProvider = ({children}) => {
+    const [state, dispatch] = useReducer(reducer,initialState)
+    return(
+        <searchContext.Provider value={{state,dispatch}}>
+            {children}
+            </searchContext.Provider>
+            
+    )
+}
+
+export const useSearch = () => useContext(searchContext)

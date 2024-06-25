@@ -8,7 +8,7 @@ const DeleteArticle = () => {
  
     useEffect(() => {
         // Fetch articles from backend when component mounts
-        fetch("http://localhost:5000/api/articles")
+        fetch("http://localhost:8000/api/delete/id:")
             .then((response) => response.json())
             .then((data) => setArticles(data))
             .catch((error) =>
@@ -18,7 +18,7 @@ const DeleteArticle = () => {
     const handleDelete = async (articleid) => {
         try {
             const response = await fetch(
-                `http://localhost:5000/api/articles/${articleid}`,
+                `http://localhost:8000/api/blog/delete/${articleid}`,
                 {
                     method: "DELETE",
                 }

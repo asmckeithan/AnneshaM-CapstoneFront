@@ -1,8 +1,7 @@
 import "../Home.css"
 import React from "react"
 import NavigationBar from "../components/NavigationBar"
-import NewsApi from "../components/NewsAPI";
-import BlogForm from "../components/Delete-blog";
+
 
 
 function HomePage() {
@@ -12,7 +11,7 @@ function HomePage() {
        <div class="parent">
         <div class="nav">  
         <NavigationBar/> 
-        <h1 className="title">Word on the Street...</h1>
+        <h1 className="title">Word on the Street is...</h1>
         <p className="intro">Join us in helping others by reporting what you see here.<br/>You can remain anonymous and report any suspicious activity HERE. <br/>We are the latest news in your local area</p>
         </div>
         
