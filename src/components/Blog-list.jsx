@@ -1,46 +1,45 @@
-
 import React, { useState, useEffect } from 'react';
-import '../blog-list.css'
- 
+
 function NewsList() {
-    const [articles, setArticles] = useState([]);
- 
-    useEffect(() => {
-        // Fetch articles from backend when component mounts
-        fetch('http://localhost:5000/api/blog')
-            .then(response => response.json())
-            .then(data => setArticles(data))
-            .catch(error =>
-                console.error('Error fetching articles:', error));
-    }, []);
-    return (
-        <div>
-            <div className="App">
-                <div class="container">
-                    {articles.map(article => (
-                        <div class="card">
- 
-                            <div class="card__body">
-                                <span class="tag tag-green">
-                                    {article.category}
-                                </span>
-                                <h4>{article.title}</h4>
-                                <p>{article.description}</p>
-                            </div>
-                            <div class="card__footer">
-                                <div class="image">
-                                    <div class="image">
-                                        <h5>{article.image}</h5>
-                                        <small>{article.createdAt}</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
- 
-        </div>
-    );
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    // Fetch articles from your API or database
+    fetchArticles();
+  }, []); // Empty dependency array means this effect runs once, on mount
+
+  const fetchArticles = async () => {
+    try {
+      // Example fetch using fetch API
+      const response = await fetch('http://localhost:8000/api/blog');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      setArticles(data.articles); // Assuming 'articles' is the key in your response
+    } catch (error) {
+      console.error('Error fetching articles:', error);
+    }
+  };
+
+  return (
+    
+    <div>
+    <h1>Articles</h1>
+    {articles.length === 0 ? (
+      <p>Loading...</p>
+    ) : (
+      <ul>
+        {articles.map(articles => (
+          <li key={articles.id}>
+            <h2>{articles.title}</h2>
+            <p>{articles.content}</p>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+  );
 }
-export default NewsList
+
+export default NewsList;

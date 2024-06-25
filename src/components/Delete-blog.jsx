@@ -8,7 +8,7 @@ const DeleteArticle = () => {
  
     useEffect(() => {
         // Fetch articles from backend when component mounts
-        fetch("http://localhost:8000/api/delete/id:")
+        fetch("http://localhost:8000/api/blog")
             .then((response) => response.json())
             .then((data) => setArticles(data))
             .catch((error) =>

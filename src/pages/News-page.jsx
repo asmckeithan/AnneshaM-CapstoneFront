@@ -6,17 +6,16 @@ import DeleteArticle from "../components/Delete-blog"
 
 
 function News() {
+    
     return(
         <div>
-        <NavigationBar/>
-        <h1 className='title'>Word on the Street is...</h1>
-        <div className="news-list">
-        <NewsList/>
+        <NavigationBar/> 
+            <div className="around">
+                <h1>GFG News App</h1>
+                <NewsList/>
+                <DeleteArticle/>
+            </div>
         </div>
-        <div className="deleted-report">
-        <DeleteArticle/>
-        </div>
-       </div>
     )
 }
 export default News
