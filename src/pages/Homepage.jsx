@@ -1,7 +1,8 @@
 import "../Home.css"
 import React from "react"
 import NavigationBar from "../components/NavigationBar"
-import VideoPlayer from '../video/senatorkennedy.mov'
+import NewsApi from "../components/NewsAPI";
+import BlogForm from "../components/Delete-blog";
 
 
 function HomePage() {
@@ -19,10 +20,12 @@ function HomePage() {
         <div className="location">
             <iframe src="https://gifer.com/embed/fxtV" width="100%" height="100%" allowFullScreen></iframe></div><p><a href="https://gifer.com">via GIFER</a></p>
         </div>
-
+{/* ==================================================================== */}
         <div class="middle-section"> 
-            
+        
+        
         </div>
+
         <div class="right-side"> Right Column</div>
         <div class="footer"> 
         <table>
