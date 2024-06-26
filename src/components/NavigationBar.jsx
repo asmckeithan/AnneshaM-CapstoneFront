@@ -16,7 +16,7 @@ const NavigationBar = () => {
             <a href="/news"> News</a>
           </li>
           <li className='nav-item'>
-            <a href="/contact"> Contact</a>
+            <a href="/update">Update</a>
           </li>
         </ul>
         <div>

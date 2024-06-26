@@ -38,6 +38,7 @@ const DeleteArticle = () => {
             console.error("Error deleting article:", error);
         }
     };
+
     return (
         <div id="tbl-head">
             <h1>----------------------Remove Articles Here ----------------------</h1>
@@ -72,4 +73,5 @@ const DeleteArticle = () => {
     );
 };
  
-export default DeleteArticle;
+
+ export default DeleteArticle;

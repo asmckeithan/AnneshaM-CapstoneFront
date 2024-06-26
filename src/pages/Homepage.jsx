@@ -1,6 +1,7 @@
 import "../Home.css"
 import React from "react"
 import NavigationBar from "../components/NavigationBar"
+import SignupForm from "../components/Signup-form";
 
 
 
@@ -21,7 +22,7 @@ function HomePage() {
         </div>
 {/* ==================================================================== */}
         <div class="middle-section"> 
-        
+        <SignupForm/>
         
         </div>
 
