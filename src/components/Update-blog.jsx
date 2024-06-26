@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"; // Import useParams and useHistory from React Router
+import "../CSS/update.css"
  // Assuming you have CSS for form styling
 
 const UpdateBlog = () => {
@@ -58,12 +59,13 @@ const UpdateBlog = () => {
     };
 
     return (
-        <div className="blog-form-container">
-            <h2>Update Blog Post</h2>
+        <div className="blogcontainer">
+            <h2 className="title2">Update Blog Post</h2>
             <form onSubmit={handleSubmit}>
-                <div className="form-group">
+                <div className="group">
                     <label>Title:</label>
                     <input
+                    className="box"
                         type="text"
                         name="title"
                         value={blog.title}
@@ -71,9 +73,10 @@ const UpdateBlog = () => {
                         required
                     />
                 </div>
-                <div className="form-group">
+                <div className="group">
                     <label>Category:</label>
                     <input
+                        className="box"
                         type="text"
                         name="category"
                         value={blog.category}
@@ -81,9 +84,10 @@ const UpdateBlog = () => {
                         required
                     />
                 </div>
-                <div className="form-group">
+                <div className="group">
                     <label>Description:</label>
                     <textarea
+                    className="box1"
                         name="description"
                         value={blog.description}
                         onChange={handleChange}
@@ -91,25 +95,27 @@ const UpdateBlog = () => {
                         required
                     />
                 </div>
-                <div className="form-group">
+                <div className="group">
                     <label>Image URL:</label>
                     <input
+                    className="box"
                         type="text"
                         name="image"
                         value={blog.image}
                         onChange={handleChange}
                     />
                 </div>
-                <div className="form-group">
+                <div className="group">
                     <label>Video URL:</label>
                     <input
+                    className="box"
                         type="text"
                         name="video"
                         value={blog.video}
                         onChange={handleChange}
                     />
                 </div>
-                <button type="submit">Update Blog Post</button>
+                <button id="button" type="submit">Update Blog Post</button>
             </form>
         </div>
     );

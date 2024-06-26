@@ -1,4 +1,4 @@
-import "../Home.css"
+
 import React from "react"
 import NavigationBar from "../components/NavigationBar"
 import ReportForm from "../components/Report-form"

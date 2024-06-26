@@ -1,5 +1,5 @@
 import React from "react";
-import '../blog-list.css'
+import '../CSS/blog-list.css'
 import { useEffect, useState } from "react";
  
 const DeleteArticle = () => {
@@ -41,7 +41,7 @@ const DeleteArticle = () => {
 
     return (
         <div id="tbl-head">
-            <h1>----------------------Remove Articles Here ----------------------</h1>
+            
             <table id="tbl">
                 <tr>
                     <th>Title</th>

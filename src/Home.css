@@ -30,7 +30,7 @@
     grid-area: 5 / 1 / 6 / 6;
     background-color: rgb(26, 91, 115);
     width: 100%;
-
+    text-align: center;
   }
 
   .title{
@@ -58,4 +58,30 @@
   }
   .location{
     height: 100%;
+  }
+  .image1{
+    width: 100%;
+    height: 600px;
+  }
+  .image2{
+    width: 100%;
+    height: 780px;
+  }
+  .disclaimer{
+    color: aliceblue;
+    text-align: center;
+    
+  }
+  .ref-table{
+    font-size: 20px;
+    padding: 10px;
+    width: 800px;
+    text-align: center;
+    color: rgb(205, 227, 246);
+    margin-left: 500px;
+    margin-bottom: 50px;
+  }
+  .image3{
+    width: 100%;
+    height: 760px;
   }

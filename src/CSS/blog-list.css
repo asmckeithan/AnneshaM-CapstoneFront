@@ -1,0 +1,31 @@
+#tbl{
+   background-color: #74c1cd; 
+   font-size: 20px;
+   width: 100%;
+   text-align: center;
+   border: black 2px;
+}
+.title{
+    text-align: center;
+    color:#74c1cd ;
+    font-size: 100px;
+    text-shadow: rgb(127, 63, 138) 1px 4px 2px ;
+  }
+  .container{
+  margin-left: 310px;
+  box-shadow: #c67ccb 2px 3px 3px;
+  }
+  .card{
+    text-align: center;
+    font-size: 20px;
+    font-family: Georgia;
+    
+  }
+  .card_body{
+    background-color: antiquewhite;
+  }
+  .App{
+    width: 100%;
+    background-color: #c67ccb;
+  
+  }

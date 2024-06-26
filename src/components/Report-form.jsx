@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../report.css'
+import '../CSS/report.css'
  
 function ReportForm({ setAuther }) {
     const [formData, setFormData] = useState({

@@ -1,0 +1,30 @@
+.blogcontainer{
+    text-align: center;
+    background-color: #4fc9e6  
+   
+}
+.group{
+    
+    font-size: 20px;
+}
+.group{
+    width: 500px;
+    height: 110px;
+    text-align: center;
+    margin-left: 690px;
+}
+.box{
+    width: 270px;
+    height: 50px;
+    border-radius: 7px;
+}
+.box1{
+    width: 270px;
+    height: 80px;
+    border-radius: 7px;
+}
+#button{
+    height: 50px;
+    width: 200px;
+    border-radius: 9px;
+}
